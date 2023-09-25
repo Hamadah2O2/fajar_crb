@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +21,21 @@
                 </div>
                 <div class="card-body">
                     <!-- Bagian menu -->
+                    <?php 
+                    if ($_SESSION['user'] == "admin") { ?>
                     <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../inputbrt/index.php">Input Berita</a>
                     <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../oplahiklan/index.php">Oplah dan Iklan</a>
                     <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../listingg/index.php">Listing</a>
                     <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../layout/index.php">Layout</a>
                     <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../opini/index.php">Opini</a>
+                    <a class="btn btn-dark mb-3 d-block mx-auto w-100" href="../../logout.php">Logout</a>    
+                    <?php 
+                    } else { ?>
+                    <a class="btn btn-danger mb-3 d-block mx-auto w-100" href="../inputbrt/index.php">Input Berita</a>
                     <a class="btn btn-dark mb-3 d-block mx-auto w-100" href="../../logout.php">Logout</a>
+                    <?php 
+                    }
+                    ?>
                     <!-- Bagian menu -->
                 </div>
             </div>

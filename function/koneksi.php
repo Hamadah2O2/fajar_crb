@@ -1,2 +1,2 @@
 <?php
-$con = mysqli_connect("localhost","root","","dbfajar");
+$con = mysqli_connect("localhost","root","","dbfajar2");

@@ -20,7 +20,7 @@
                     <?php
                     if(isset($_GET['pesan'])){
                         if($_GET['pesan'] == 'gagal'){
-                            echo 'Akun yang anda masukan salah';
+                            echo 'Akun yang anda masukan salah!';
                         }
                     }
                     ?>
@@ -28,6 +28,10 @@
                     <form action="login.php" method="post">
                         <input type="text " class="form-control mb-3 mt-2" placeholder="Masukan Username" name="username">
                         <input type="password" class="form-control mb-3" placeholder="Masukan Password" name="password">
+                        <div class="mb-3 text-end">                            
+                            <input type="checkbox" class="form-check-input" name="admin" value="yes" id="ckadmin">
+                            <label class="form-check-label" for="ckadmin"> Admin</label>
+                        </div>
                         <button class="btn btn-danger mb-3 d-block mx-auto w-100" type="submit" name="login">Login</button>
                     </form>
                     <!-- Bagian form login -->
